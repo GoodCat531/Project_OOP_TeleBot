@@ -22,7 +22,7 @@ def start(message: telebot.types.Message):
 def values(message: telebot.types.Message):
     text = 'Доступные валюты:'
     for i in exchanges.keys():
-        text = '\n'.join((text))
+        text = '\n'.join((text, i))
     bot.reply_to(message, text)
 
 
